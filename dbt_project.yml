@@ -31,7 +31,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   +transient: false
   dbt_project:
-    # Config indicated by + and applies to all files under models/example/
     customers_stg:
       +schema: l2_processing
       +materialized: view
@@ -42,7 +41,15 @@ models:
       +schema: l2_processing
       +materialized: view
     customerrevenue:
+      +schema: l3_consumption
       +materialized: table
     orders_fact:
       +materialized: table
       +schema: l2_processing
+    storeperformance:
+      +schema: l3_consumption
+      +materialized: table
+
+seeds:
+  dbt_project:
+    +schema: l3_consumption
