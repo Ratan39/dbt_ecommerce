@@ -1,0 +1,42 @@
+sources:
+  - name: landing
+    database: dbt_db
+    schema: L1_LANDING
+    tables:
+      - name: cust
+        identifier: customers
+      - name: ordr
+        identifier: orders
+      - name: ordr_itms
+        identifier: orderitems
+
+      - name: orders
+        description: The orders table from order management system.      
+        identifier: orders
+      - name: orderitems
+        description: The orderitems table from order management system.      
+        identifier: orderitems
+      - name: employees
+        description: The employees table from order management system.      
+        identifier: employees
+        columns:
+          - name: address
+            description: Full Address of emplyees for Transport Arrangements.          
+            tests:
+              - not_null
+              - string_not_empty
+      - name: sales_us
+      - name: sales_europe
+      - name: sales_asia
+      - name: stores
+      - name: suppliers
+      - name: products
+
+  - name: training
+    database: SLEEKMART_OMS
+    schema: TRAINING
+    tables:
+      - name: city_temperature
+      - name: sales_us
+      - name: sales_uk
+      - name: sales_india
