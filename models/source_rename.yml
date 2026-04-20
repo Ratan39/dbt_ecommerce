@@ -33,7 +33,7 @@ sources:
       - name: products
 
   - name: training
-    database: SLEEKMART_OMS
+    database: dbt_db
     schema: TRAINING
     tables:
       - name: city_temperature

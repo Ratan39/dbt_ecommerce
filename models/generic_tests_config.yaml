@@ -24,7 +24,8 @@ models:
           - unique
           - not_null
 
-      - name: statuscd   
+      - name: statuscd
+        description: " {{ doc('Statuscd') }}"   
         tests:
           - accepted_values:
               arguments:
