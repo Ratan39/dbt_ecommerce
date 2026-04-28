@@ -3,7 +3,7 @@ sources:
     database: dbt_db
     schema: L1_LANDING
     tables:
-      - name: cust
+      - name: customers
         identifier: customers
       - name: ordr
         identifier: orders
